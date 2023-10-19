@@ -1,15 +1,19 @@
 import RouteText from "./routers/index_router";
 
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const bodyParser = require('body-parser');
 
+const app = express()
+const port = 4242
+
+app.use(express.text());
+app.use(express.json());
+app.use(bodyParser.json());
+app.use('/', RouteText);
 
 app.get('/', (req: any, res: any) => {
   res.send('Hello World');
 });
-app.use(express.text());
-app.use('/', RouteText);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
