@@ -1,9 +1,9 @@
 import express from 'express'
-import getToken from '../controllers/index_controller'
+import { getToken, justifyText} from '../controllers/index_controller'
 
 const RouteText = express()
 
 RouteText.post('/api/token', getToken);
-RouteText.post('/api/justify');
+RouteText.post('/api/justify', justifyText);
 
 export default RouteText;
