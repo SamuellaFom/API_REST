@@ -8,12 +8,12 @@ In this project, you will find a REST API that allows you to justify a text.
   * the authentication token retrieves the number of words passed in the request.
 
 ### Installation Guide
-  * Clone this repository [here] (https://github. com/blackdevelopa/ProjectSupport. git).
+  * Clone this repository https://github.com/SamuellaFom/API_REST.git.
   * Run ``npm install`` to install all dependencies
   * Create an .env file in your project root folder and add your variables. See .env.sample for assistance.
-  
+
 ### Use
-  * Run ``npm run dev``` to start the application.
+  * Run ```npm run dev``` to start the application.
   * Connect to the API using Postman on port 4242.
 
 ### API Endpoints
