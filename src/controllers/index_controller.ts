@@ -17,20 +17,17 @@ dotenv.config();
 export async function getToken(req: Request, res: Response) {
   const login = req.body;
   const count_word = 0;
-
-  if (login.email === "foo@bar.com") {
-    const acces_token = jwt.sign(
-      {
-        email: login.email,
-        total_word: count_word,
-      },
-      process.env.JWT_SIGN_SECRET,
-      {
-        expiresIn: "24h",
-      }
-    );
-    res.json({ accesToken: acces_token });
-  }
+  const acces_token = jwt.sign(
+    {
+      email: login.email,
+      total_word: count_word,
+    },
+    process.env.JWT_SIGN_SECRET,
+    {
+      expiresIn: "24h",
+    }
+  );
+  res.json({ accesToken: acces_token });
 }
 
 /**
