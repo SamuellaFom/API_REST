@@ -21,7 +21,7 @@ export default function authenticateJWT(
       if (err) {
         res.sendStatus(403);
       }
-      if (total_word_used > 80) {
+      if (total_word_used > 80000) {
         res.sendStatus(402);
       }
       next();
